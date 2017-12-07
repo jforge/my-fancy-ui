@@ -1,0 +1,56 @@
+{
+  "name": "@immowelt/my-fancy-ui-i18n",
+  "description": "Translation files and the associated API for the my-fancy-ui",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "yarn run lint && yarn run flow && yarn run jest:coverage",
+    "lint": "eslint src",
+    "jest": "jest",
+    "jest:watch": "yarn run jest --watch",
+    "jest:coverage": "yarn run jest --coverage",
+    "flow": "flow",
+    "flow-typed": "flow-typed",
+    "flow-typed-install":
+      "flow-typed install --ignoreDeps=bundled peer --overwrite"
+  },
+  "engines": {
+    "node": ">=8.9.2",
+    "yarn": ">=1.0.2"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@immowelt/babel-preset-immowelt-node": "1.1.0",
+    "@immowelt/babel-preset-immowelt-react": "1.2.2",
+    "node-polyglot": "2.2.2"
+  },
+  "devDependencies": {
+    "@immowelt/eslint-config-immowelt-react": "2.0.2",
+    "@immowelt/jest-preset-node": "1.0.0",
+    "eslint": "4.12.1",
+    "flow-bin": "0.60.1",
+    "flow-typed": "2.2.3",
+    "jest": "21.2.1"
+  },
+  "peerDependencies": {
+    "node-polyglot": "^2.2.2"
+  },
+  "jest": {
+    "preset": "@immowelt/jest-preset-node",
+    "transformIgnorePatterns": ["node_modules/(?!@immowelt|@immowelt)"],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jforge/my-fancy-ui.git"
+  },
+  "version": "0.0.0-development",
+  "private": true,
+  "license": "MIT"
+}
